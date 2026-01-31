@@ -2,7 +2,7 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 
-import appCss from '../styles.css?url'
+import '../styles.css'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -15,19 +15,51 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'GitProof - Developer Rating System',
-      },
-      {
         name: 'description',
         content:
           'Evaluates GitHub activity, analyzes code quality, and generates detailed performance metrics using AI.',
       },
+      {
+        name: 'keywords',
+        content: 'GitHub, developer, rating, code quality, AI, metrics, leaderboard',
+      },
+      {
+        property: 'og:title',
+        content: 'GitProof - Developer Rating System',
+      },
+      {
+        property: 'og:description',
+        content: 'Evaluates GitHub activity, analyzes code quality, and generates detailed performance metrics using AI.',
+      },
+      {
+        property: 'og:image',
+        content: '/logo192.png',
+      },
+      {
+        property: 'og:url',
+        content: 'https://gitproof.netlify.app',
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      {
+        name: 'twitter:title',
+        content: 'GitProof - Developer Rating System',
+      },
+      {
+        name: 'twitter:description',
+        content: 'Evaluates GitHub activity, analyzes code quality, and generates detailed performance metrics using AI.',
+      },
+      {
+        name: 'twitter:image',
+        content: '/logo192.png',
+      },
+      {
+        title: 'GitProof - Developer Rating System',
+      },
     ],
     links: [
-      {
-        rel: 'stylesheet',
-        href: appCss,
-      },
       {
         rel: 'preconnect',
         href: 'https://fonts.googleapis.com',
@@ -43,6 +75,8 @@ export const Route = createRootRoute({
       },
     ],
   }),
+
+  notFoundComponent: () => <div className="flex items-center justify-center min-h-screen"><h1 className="text-2xl font-bold">404 - Page Not Found</h1></div>,
 
   shellComponent: RootDocument,
 })

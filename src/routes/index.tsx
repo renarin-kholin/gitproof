@@ -31,16 +31,16 @@ function Landing() {
     if (tagsRef.current) {
       Array.from(tagsRef.current.children).forEach((child, i) => {
         setTimeout(() => {
-          ;(child as HTMLElement).style.opacity = '1'
-          ;(child as HTMLElement).style.transform = 'translateY(0) scale(1)'
+          ; (child as HTMLElement).style.opacity = '1'
+            ; (child as HTMLElement).style.transform = 'translateY(0) scale(1)'
         }, 300 + i * 80)
       })
     }
     if (cardsRef.current) {
       Array.from(cardsRef.current.children).forEach((child, i) => {
         setTimeout(() => {
-          ;(child as HTMLElement).style.opacity = '1'
-          ;(child as HTMLElement).style.transform = 'translateY(0)'
+          ; (child as HTMLElement).style.opacity = '1'
+            ; (child as HTMLElement).style.transform = 'translateY(0)'
         }, 500 + i * 150)
       })
     }
@@ -81,43 +81,6 @@ function Landing() {
       {/* Navbar */}
       <nav className="w-full max-w-7xl px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 z-10">
         <Logo />
-
-        <div className="flex items-center gap-2 w-full md:w-auto justify-center">
-          <Link
-            to="/compare"
-            className="hidden md:flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-black mr-4 transition-colors"
-          >
-            <Sword className="w-4 h-4" /> Compare
-          </Link>
-
-          <div className="flex items-center gap-1 border border-gray-200 rounded-lg p-1 pr-3 bg-white shadow-sm hover:shadow-md transition-shadow w-full max-w-sm md:w-auto">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                handleSearch(input)
-              }}
-              className="flex items-center flex-1"
-            >
-              <div className="px-3 text-gray-400">
-                <Search className="w-4 h-4" />
-              </div>
-              <input
-                type="text"
-                placeholder="Enter GitHub username..."
-                className="outline-none text-sm text-gray-900 w-full md:w-48 py-2 bg-transparent placeholder-gray-400"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-              />
-            </form>
-            <button
-              onClick={() => handleSearch(input)}
-              className="text-xs font-medium text-gray-600 hover:text-black flex items-center gap-1 bg-gray-50 px-3 py-1.5 rounded-md border border-gray-200 whitespace-nowrap cursor-pointer transition-colors"
-            >
-              Analyze <ChevronRight className="w-3 h-3" />
-            </button>
-            <Github className="w-5 h-5 text-black cursor-pointer ml-1 hidden sm:block" />
-          </div>
-        </div>
       </nav>
 
       {/* Hero */}
@@ -235,33 +198,18 @@ function Landing() {
               </li>
             </ul>
           </div>
-
-          <div>
-            <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">
-              Resources
-            </h4>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li className="cursor-pointer hover:text-black transition-colors">
-                Feature Request
-              </li>
-            </ul>
-          </div>
-
           <div>
             <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">
               Community
             </h4>
             <ul className="space-y-2 text-sm text-gray-600">
+              <a href="http://github.com/renarin-kholin/gitproof" target="_blank" rel="noopener noreferrer">
               <li className="cursor-pointer hover:text-black transition-colors flex items-center gap-2">
-                <Github size={14} /> Star on GitHub
+                <Github size={14} />Star on GitHub
               </li>
+              </a>
             </ul>
           </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-gray-200/50 text-center md:text-left">
-          <p className="text-xs text-gray-400">
-            © 2024 GitProof. All rights reserved.
-          </p>
         </div>
       </footer>
 

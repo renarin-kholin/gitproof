@@ -120,23 +120,6 @@ function CompareLanding() {
 
   return (
     <div className="min-h-screen bg-[#FDFBF7] flex flex-col items-center font-sans selection:bg-yellow-100">
-      {/* Navbar */}
-      <nav className="w-full max-w-7xl px-6 py-6 flex justify-between items-center z-20">
-        <Logo />
-        <div className="flex items-center gap-2 bg-white px-1 py-1 rounded-lg border border-gray-200 shadow-sm">
-          <Link
-            to="/"
-            className="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-black flex items-center gap-2 transition-colors"
-          >
-            Analyze <ChevronRight className="w-4 h-4" />
-          </Link>
-          <div className="w-px h-5 bg-gray-200"></div>
-          <div className="px-2">
-            <Github className="w-5 h-5 text-black" />
-          </div>
-        </div>
-      </nav>
-
       <main
         ref={contentRef}
         className="flex-1 w-full flex flex-col items-center justify-center -mt-20 p-6"
