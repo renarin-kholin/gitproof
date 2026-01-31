@@ -10,7 +10,8 @@ export const Route = createFileRoute('/leaderboard')({
 })
 
 function LeaderboardPage() {
-  const leaderboard = Route.useLoaderData()
+  const result = Route.useLoaderData()
+  const leaderboard = result.success ? result.data : []
 
   return (
     <div className="min-h-screen bg-white flex flex-col items-center">

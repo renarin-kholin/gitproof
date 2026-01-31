@@ -6,6 +6,7 @@
     "dev": "vite dev --port 3000",
     "build": "vite build",
     "preview": "vite preview",
+    "deploy": "netlify deploy",
     "test": "vitest run",
     "lint": "eslint",
     "format": "prettier",
@@ -14,6 +15,8 @@
   "dependencies": {
     "@google/genai": "^1.38.0",
     "@gsap/react": "^2.1.2",
+    "@netlify/vite-plugin-tanstack-start": "^1.2.8",
+    "@supabase/supabase-js": "^2.93.3",
     "@tailwindcss/vite": "^4.0.6",
     "@tanstack/react-devtools": "^0.7.0",
     "@tanstack/react-router": "^1.132.0",
